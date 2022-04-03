@@ -5,13 +5,15 @@ import './styles.css';
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
+    <div className='app'>
+      <BrowserRouter>
+        <Routes>
 
-        <Route element={<Home />} path="/home" />
-        <Route element={<Contact />} path="/contact" />
+          <Route element={<Home />} path='/home' />
+          <Route element={<Contact />} path='/contact' />
 
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }

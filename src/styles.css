@@ -82,7 +82,7 @@ body {
 /* Card.js */
 .card-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
 }
@@ -91,7 +91,7 @@ body {
   background-color: var(--light-gray-inputs);
   margin: 4px;
   border-radius: 4px;
-  padding: 48px;
+  padding: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,11 +142,21 @@ body {
     max-width: unset;
   }
 
+  .card-container {
+    margin: 48px auto;
+  }
+
   .card {
     flex-grow: 0;
   }
 
   .textblock-title {
     margin: 32px 16px;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  .card-container {
+    justify-content: space-evenly;
   }
 }

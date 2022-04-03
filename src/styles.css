@@ -11,6 +11,7 @@
   --font-size-nav: 18px;
   --font-size-header-one: 48px;
   --font-size-header-two: 36px;
+  --font-size-header-three: 18px;
 }
 
 body {
@@ -21,6 +22,41 @@ body {
   font-family: var(--font-family);
   max-width: 1250px;
   margin: auto;
+}
+
+.title--h1 {
+  font-size: var(--font-size-header-one);
+}
+
+
+.title--h2 {
+  font-size: var(--font-size-header-two);
+}
+
+.title--h3 {
+  font-size: var(--font-size-header-three);
+  font-weight: var(--font-weight-medium);
+  word-spacing: 0.4rem;
+  line-height: 1.65rem;
+}
+
+.text--white {
+  color: var(--light-gray-inputs);
+}
+
+.title--underline {
+  padding-bottom: 2px;
+  border-bottom: 4px solid var(--gold);
+}
+
+
+/* TextBlock */
+.textblock-container {
+  margin: auto;
+}
+
+.textblock-title {
+  margin: 32px 24px;
 }
 
 /* Navigation */
@@ -108,5 +144,9 @@ body {
 
   .card {
     flex-grow: 0;
+  }
+
+  .textblock-title {
+    margin: 32px 16px;
   }
 }

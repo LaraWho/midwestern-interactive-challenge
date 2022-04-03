@@ -11,7 +11,7 @@ export default function Home() {
     return(
       <>
         <Navigation linkTo="contact" />
-        <div className='card-container'>
+        <div className='card_wrapper'>
           <Card image={talkie} />
           <Card image={rabbit} />
           <Card image={shield} />

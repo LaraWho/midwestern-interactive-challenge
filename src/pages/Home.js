@@ -1,9 +1,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
+import Card from '../components/Card';
+import HeadingOne from '../components/TextBlock';
 import rabbit from '../assets/Rabbit.png';
 import shield from '../assets/Shield.png';
 import talkie from '../assets/Talkie.png';
-import Card from '../components/Card';
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
           <Card image={rabbit} />
           <Card image={shield} />
         </div>
+        <HeadingOne />
       </>
     )
   }

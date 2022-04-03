@@ -24,13 +24,15 @@ body {
   margin: auto;
 }
 
+/* Text and button modifiers */
 .title--h1 {
   font-size: var(--font-size-header-one);
+  color: var(--dark-gray-background);
 }
-
 
 .title--h2 {
   font-size: var(--font-size-header-two);
+  color: var(--dark-gray-background);
 }
 
 .title--h3 {
@@ -38,6 +40,26 @@ body {
   font-weight: var(--font-weight-medium);
   word-spacing: 0.4rem;
   line-height: 1.65rem;
+}
+
+.text--paragraph {
+  font-size: var(--font-size-paragraph);
+  color: var(--mid-gray-text);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.65rem;
+  word-spacing: 0.15rem;
+}
+
+.button {
+  font-size: var(--font-size-paragraph);
+  font-family: var(--font-family);
+}
+
+.button--primary {
+  padding: 12px 24px;
+  border: none;
+  background-color: var(--gold);
+  color: var(--light-gray-inputs);
 }
 
 .text--white {
@@ -51,11 +73,11 @@ body {
 
 
 /* TextBlock */
-.textblock-container {
+.textblock_container {
   margin: auto;
 }
 
-.textblock-title {
+.textblock_title, .textblock_text {
   margin: 32px 24px;
 }
 
@@ -80,14 +102,14 @@ body {
 }
 
 /* Card.js */
-.card-container {
+.card_wrapper {
   display: flex;
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
 }
 
-.card {
+.card_container {
   background-color: var(--light-gray-inputs);
   margin: 4px;
   border-radius: 4px;
@@ -111,29 +133,10 @@ body {
 }
 
 .card_title {
-  color: var(--dark-gray-background);
-  font-size: var(--font-size-header-two);
   margin-bottom: 16px;
 }
 
-.card_text {
-  color: var(--mid-gray-text);
-  margin-top: auto;
-  line-height: 1.65rem;
-  word-spacing: 0.15rem;
-}
-
-.card_text, .button {
-  font-size: var(--font-size-paragraph);
-  font-weight: var(--font-weight-medium);
-}
-
-.button {
-  background-color: var(--gold);
-  color: var(--light-gray-inputs);
-  font-family: var(--font-family);
-  padding: 12px 24px;
-  border: none;
+.card_text, .card_button {
   margin-top: auto;
 }
 
@@ -142,21 +145,21 @@ body {
     max-width: unset;
   }
 
-  .card-container {
+  .card_wrapper {
     margin: 48px auto;
   }
 
-  .card {
+  .card_container {
     flex-grow: 0;
   }
 
-  .textblock-title {
+  .textblock_title, .textblock_text {
     margin: 32px 16px;
   }
 }
 
 @media only screen and (min-width: 1250px) {
-  .card-container {
+  .card_wrapper {
     justify-content: space-evenly;
   }
 }

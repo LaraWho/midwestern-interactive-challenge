@@ -7,18 +7,18 @@
   --font-family: 'Poppins', sans-serif;
   --font-weight-medium: medium;
   --font-weight-bold: bold;
-  --font-size-paragraph: 18px;
+  --font-size-paragraph: 14px;
+  --font-size-nav: 18px;
   --font-size-header-one: 48px;
   --font-size-header-two: 36px;
 }
 
 body {
-  font-family: var(--font-family);
   background-color: var(--dark-gray-background);
-  margin: 8px;
 }
 
 .app {
+  font-family: var(--font-family);
   max-width: 1250px;
   margin: auto;
 }
@@ -40,11 +40,73 @@ body {
   text-decoration: none;
   color: var(--gold);
   text-transform: lowercase;
+  font-size: var(--font-size-nav);
+}
+
+/* Card.js */
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: var(--light-gray-inputs);
+  margin: 4px;
+  border-radius: 4px;
+  padding: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card_img {
+  margin: auto;
+}
+
+.card_title, .card_text {
+  text-align: left;
+  width: 100%;
+  max-width: 320px;
+  margin: 24px auto;
+}
+
+.card_title {
+  color: var(--dark-gray-background);
+  font-size: var(--font-size-header-two);
+  margin-bottom: 16px;
+}
+
+.card_text {
+  color: var(--mid-gray-text);
+  margin-top: auto;
+  line-height: 1.65rem;
+  word-spacing: 0.15rem;
+}
+
+.card_text, .button {
   font-size: var(--font-size-paragraph);
+  font-weight: var(--font-weight-medium);
+}
+
+.button {
+  background-color: var(--gold);
+  color: var(--light-gray-inputs);
+  font-family: var(--font-family);
+  padding: 12px 24px;
+  border: none;
+  margin-top: auto;
 }
 
 @media only screen and (min-width: 600px) {
   .nav_logo {
     max-width: unset;
+  }
+
+  .card {
+    flex-grow: 0;
   }
 }

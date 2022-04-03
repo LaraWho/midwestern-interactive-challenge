@@ -4,11 +4,10 @@ import logo from '../assets/Logo.png';
 
 export default function Navigation( { linkTo } ) {
 
-
   return(
-    <div className='nav'>
-      <img src={logo} className='nav_logo' alt='Midwestern Interactive' />
-      <Link to={`/${ linkTo }`} className='nav_link' >
+    <div className='nav_container'>
+      <img src={logo} className='nav_item nav-logo' alt='Midwestern Interactive' />
+      <Link to={`/${ linkTo }`} className='nav_item nav-link' >
         <h2 className='nav_link'>
           { linkTo }
         </h2>

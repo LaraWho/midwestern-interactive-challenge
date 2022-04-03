@@ -64,7 +64,7 @@ export default function Form() {
         <textarea 
           className='form_input input--full' 
           type='text' 
-          rows='10'
+          rows='8'
           placeholder='Message' 
           name='message'
           value={message} 

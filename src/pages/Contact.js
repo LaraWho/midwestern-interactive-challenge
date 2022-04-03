@@ -6,7 +6,7 @@ export default function Contact() {
   
     return(
       <>
-      <Navigation linkTo="Home" />
+      <Navigation linkTo="home" />
 
       </>
     )

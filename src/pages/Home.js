@@ -1,20 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navigation from '../components/Navigation';
 import Card from '../components/Card';
 import TextBlock from '../components/TextBlock';
-import rabbit from '../assets/Rabbit.png';
-import shield from '../assets/Shield.png';
-import talkie from '../assets/Talkie.png';
+import { get } from '../apiController';
 
 
 export default function Home() {
-    return(
+  const [ pageContent, setContent ] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const apiData = await get('home');
+      setContent(apiData.data)
+    }
+    getData();
+  }, [])
+
+  const displayCards = pageContent.map((cardContent, i) => (
+      <Card key={i} imageNum={i} data={cardContent} />
+    ))
+  
+  return(
       <>
         <Navigation linkTo='contact' />
         <div className='card_wrapper'>
-          <Card image={talkie} />
-          <Card image={rabbit} />
-          <Card image={shield} />
+          { displayCards }
         </div>
         <TextBlock />
       </>

@@ -3,6 +3,8 @@ import Navigation from '../components/Navigation';
 import Card from '../components/Card';
 import TextBlock from '../components/TextBlock';
 import UOList from '../components/UOList';
+import Heading from '../components/Heading';
+import Paragraph from '../components/Paragraph';
 import { get } from '../apiController';
 import { title, content, removeDuplicates } from '../data';
 
@@ -38,8 +40,11 @@ export default function Home() {
           { displayCards }
         </div>
         <button onClick={displayNames}>remove duplicates</button>
-        <TextBlock title={title} content={content} />
-        { isListDisplayed && <UOList names={names} /> }
+        <div className='textblock_container'>
+          <Heading content={title} />
+          <Paragraph paragraphText={content} />
+          { isListDisplayed && <UOList names={names} /> }
+        </div>
       </>
     )
   }

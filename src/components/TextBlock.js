@@ -1,12 +1,14 @@
 import React from 'react';
+import Heading from './Heading';
+import Paragraph from './Paragraph';
 
 export default function TextBlock( props ) {
   const { title, content } = props;
 
   return(
     <div className='textblock_container'>
-      <h1 className='textblock_title title--h1 text--white'><span className='title--underline'>{title}</span></h1>
-      <p className='textblock_text text--paragraph text--white'>{content}</p>
+      <Heading content={title} />
+      <Paragraph paragraphText={content} />
     </div>
   )
 }

@@ -6,8 +6,8 @@ import { get } from '../apiController';
 
 
 export default function Contact() {
-  const [ pageContent, setContent ] = useState({ title: '', content: '' });
-  const [ currentPage ] = useState( 'contact' )
+  const [ pageContent, setContent ] = useState({title: '', content: ''});
+  const [ currentPage ] = useState('contact')
 
   useEffect(() => {
     const getData = async () => {

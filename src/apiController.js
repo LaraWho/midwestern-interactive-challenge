@@ -4,5 +4,4 @@ export const get = async ( page ) => {
       .then(data => {
         return data;
       }).catch(err => console.log(err))
-
 }

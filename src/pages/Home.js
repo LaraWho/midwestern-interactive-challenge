@@ -6,17 +6,19 @@ import { get } from '../apiController';
 
 
 export default function Home() {
-  const [ pageContent, setContent ] = useState([]);
+  const [ cardContent, setContent ] = useState([]);
+  const [ currentPage ] = useState( 'home' )
+
 
   useEffect(() => {
     const getData = async () => {
-      const apiData = await get('home');
+      const apiData = await get(currentPage);
       setContent(apiData.data)
     }
     getData();
-  }, [])
+  }, [currentPage])
 
-  const displayCards = pageContent.map((cardContent, i) => (
+  const displayCards = cardContent.map((cardContent, i) => (
       <Card key={i} imageNum={i} data={cardContent} />
     ))
   
@@ -26,7 +28,7 @@ export default function Home() {
         <div className='card_wrapper'>
           { displayCards }
         </div>
-        <TextBlock />
+        <TextBlock title='JavaScript Puzzle' content='Remove the duplicates in 2 Javascript objects (found in readme), add the results to an array and output the list of distinct names in an unordered list below this paragraph when <a>this link</a> is clicked. If the operation has been completed already, notify the user that this has already been done.'/>
       </>
     )
   }

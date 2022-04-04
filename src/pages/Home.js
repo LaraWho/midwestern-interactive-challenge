@@ -2,33 +2,44 @@ import React, { useEffect, useState } from 'react';
 import Navigation from '../components/Navigation';
 import Card from '../components/Card';
 import TextBlock from '../components/TextBlock';
+import UOList from '../components/UOList';
 import { get } from '../apiController';
+import { title, content, removeDuplicates } from '../data';
 
 
 export default function Home() {
   const [ cardContent, setContent ] = useState([]);
-  const [ currentPage ] = useState( 'home' )
+  const [ currentPage ] = useState('home')
+  const [ isListDisplayed, setDisplayBool  ] = useState(false);
+  const [ names, setNames  ] = useState([]);
 
 
   useEffect(() => {
-    const getData = async () => {
+    (async () => {
       const apiData = await get(currentPage);
       setContent(apiData.data)
-    }
-    getData();
-  }, [currentPage])
+    })()
+  }, [currentPage])  
+
+  const displayNames = () => {
+    let nameList = removeDuplicates();
+    setNames(nameList);
+    setDisplayBool(true);
+  }
 
   const displayCards = cardContent.map((cardContent, i) => (
       <Card key={i} imageNum={i} data={cardContent} />
     ))
-  
-  return(
+
+    return(
       <>
         <Navigation linkTo='contact' />
         <div className='card_wrapper'>
           { displayCards }
         </div>
-        <TextBlock title='JavaScript Puzzle' content='Remove the duplicates in 2 Javascript objects (found in readme), add the results to an array and output the list of distinct names in an unordered list below this paragraph when <a>this link</a> is clicked. If the operation has been completed already, notify the user that this has already been done.'/>
+        <button onClick={displayNames}>remove duplicates</button>
+        <TextBlock title={title} content={content} />
+        { isListDisplayed && <UOList names={names} /> }
       </>
     )
   }

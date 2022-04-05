@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { post } from '../apiController';
 
 export default function Form() {
 
-  const [ formValues, setState ] = useState({
-    firstName: '',
-    lastName: '',
+  const [ formValues, setFormValues ] = useState({
+    first_name: '',
+    last_name: '',
     title: '',
     email: '',
     message: ''
@@ -13,15 +14,31 @@ export default function Form() {
   const handleChange = (event) => {
     const value = event.target.value;
 
-    setState({
+    setFormValues({
       ...formValues,
       [event.target.name]: value
     })
   }
 
-  const { firstName, lastName, title, email, message } = formValues
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    post(formValues);
+    handleReset();
+  }
 
-  return(
+  const handleReset = () => {
+    setFormValues({
+      first_name: '',
+      last_name: '',
+      title: '',
+      email: '',
+      message: ''
+    })
+  }
+
+  const { first_name, last_name, title, email, message } = formValues
+
+  return (
     <>
       <h2 className='form_title title--h2'>Heading Two</h2>
       <form className='form_container'>
@@ -29,8 +46,8 @@ export default function Form() {
           className='form_input input--resize' 
           type='text' 
           placeholder='First Name' 
-          name='firstName' 
-          value={firstName} 
+          name='first_name' 
+          value={first_name} 
           onChange={handleChange} 
           />
 
@@ -38,8 +55,8 @@ export default function Form() {
           className='form_input input--resize' 
           type='text' 
           placeholder='Last Name' 
-          name='lastName' 
-          value={lastName} 
+          name='last_name' 
+          value={last_name} 
           onChange={handleChange}
           />
 
@@ -71,7 +88,7 @@ export default function Form() {
           onChange={handleChange} 
           />
 
-        <button className='form_button button button--primary'>Submit</button>
+        <button className='form_button button button--primary' onClick={handleSubmit}>Submit</button>
 
       </form>
     </>

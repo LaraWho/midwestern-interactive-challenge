@@ -34,7 +34,7 @@ export default function RemoveDuplicate() {
   return (
     <>  
       <Heading content='JavaScript Puzzle' />
-      <Paragraph paragraphText={paragraphText}/>
+      <Paragraph content={paragraphText}/>
       <div className='list_container'>
         { names && <UOList names={names} /> }
       </div>

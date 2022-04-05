@@ -77,21 +77,26 @@ body {
   border-bottom: 4px solid var(--accent-color);
 }
 
+.list_item {
+  line-height: 1.5rem;
+}
+
 
 /* TextBlock */
 .textblock_wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 48px;
 }
 
 .textblock_container {
   margin: auto;
+  padding: 32px 24px;
+  max-width: 975px;
 }
 
 .textblock_title, .textblock_text {
-  margin: 32px 24px;
+  margin: 32px 0px;
 }
 
 /* Navigation */
@@ -194,7 +199,7 @@ body {
 }
 
 .contact-textblock {
-  margin: 54px auto;
+  max-width: 625px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -210,8 +215,8 @@ body {
     flex-grow: 0;
   }
 
-  .textblock_title, .textblock_text {
-    margin: 32px 16px;
+  .textblock_container {
+    max-width: 1250px;
   }
 
   .input--resize {

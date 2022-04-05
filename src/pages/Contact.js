@@ -10,14 +10,13 @@ export default function Contact() {
   const [ currentPage ] = useState('contact')
 
   useEffect(() => {
-    const getData = async () => {
+    (async () => {
       const apiData = await get(currentPage);
       setContent({
         title: apiData.data[0].title,
         content: apiData.data[0].content,
       })
-    }
-    getData();
+    })()
   }, [currentPage])
   
   const { title, content } = pageContent;

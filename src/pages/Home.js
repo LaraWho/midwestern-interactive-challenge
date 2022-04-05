@@ -26,7 +26,7 @@ export default function Home() {
         <div className='card_wrapper'>
           { displayCards }
         </div>
-        <div className='textblock_container'>
+        <div className='textblock_container_home'>
           <RemoveDuplicate />
         </div>
       </>)

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Navigation from '../components/Navigation';
-import TextBlock from '../components/TextBlock';
 import Form from '../components/Form';
+import Heading from '../components/Heading';
+import Paragraph from '../components/Paragraph';
 import { get } from '../apiController';
 
 
@@ -27,8 +28,9 @@ export default function Contact() {
         <Navigation linkTo='home' />
 
         <div className='contact_container'>
-          <div className='textblock_wrapper contact-textblock'>
-            <TextBlock title={title} content={content} />
+          <div className='textblock_container_contact'>
+            <Heading content={title} />
+            <Paragraph content={content} />
           </div>
 
           <div className='form_wrapper'>

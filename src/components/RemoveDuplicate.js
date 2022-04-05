@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Heading from './Heading';
-import UOList from '../components/UOList';
-import { removeDuplicates } from '../data';
+import List from './List';
 import Paragraph from './Paragraph';
+import { removeDuplicates } from '../jsPuzzle';
 
 export default function RemoveDuplicate() {
   const [ disabled, setDisabled  ] = useState(false);
@@ -36,7 +36,7 @@ export default function RemoveDuplicate() {
       <Heading content='JavaScript Puzzle' />
       <Paragraph content={paragraphText}/>
       <div className='list_container'>
-        { names && <UOList names={names} /> }
+        { names && <List names={names} /> }
       </div>
     </>
 

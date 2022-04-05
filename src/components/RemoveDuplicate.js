@@ -31,7 +31,7 @@ export default function RemoveDuplicate() {
     </>
   )
 
-  return(
+  return (
     <>  
       <Heading content='JavaScript Puzzle' />
       <Paragraph paragraphText={paragraphText}/>

@@ -20,8 +20,8 @@ export default function Home() {
       <Card key={i} imageNum={i} data={cardContent} />
     ))
 
-    return(
-      <>
+    return cardContent.length &&
+      (<>
         <Navigation linkTo='contact' />
         <div className='card_wrapper'>
           { displayCards }
@@ -29,6 +29,5 @@ export default function Home() {
         <div className='textblock_container'>
           <RemoveDuplicate />
         </div>
-      </>
-    )
+      </>)
   }

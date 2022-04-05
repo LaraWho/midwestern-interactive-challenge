@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function Paragraph( { paragraphText } ) {
-  return(
+  return (
     <p className='paragraph_text text--paragraph text--white'>{paragraphText}</p>
   )
 }

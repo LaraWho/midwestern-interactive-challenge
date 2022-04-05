@@ -20,9 +20,9 @@ export default function Contact() {
   }, [currentPage])
   
   const { title, content } = pageContent;
-  
-    return(
-      <div className='contact_wrapper'>
+    
+    return pageContent.content &&
+      (<div className='contact_wrapper'>
 
         <Navigation linkTo='home' />
 
@@ -36,6 +36,5 @@ export default function Contact() {
           </div>
         </div>
 
-      </div>
-    )
+      </div>)
 }

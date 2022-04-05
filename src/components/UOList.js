@@ -7,7 +7,7 @@ export default function UOList( props ) {
     <li key={i} className='list_item text-paragraph text--white'>{ name }</li>
   ))
 
-  return(
+  return (
     <ul className='list'>
       { unorderedList }
     </ul>

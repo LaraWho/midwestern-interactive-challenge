@@ -119,9 +119,12 @@ body {
 }
 
 /* Text Block */
+.textblock_container_home, .textblock_container_contact {
+  padding: 32px 16px;
+}
+
 .textblock_container_home {
   margin: auto;
-  padding: 32px 24px;
   max-width: 975px;
 }
 
@@ -130,12 +133,15 @@ body {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding: 32px 24px;
   max-width: 975px;
 }
 
 .heading_title, .paragraph_text {
   margin: 32px 0px;
+}
+
+.heading_title {
+  line-height: 5rem;
 }
 
 /* Navigation */
@@ -325,6 +331,7 @@ body {
     flex-grow: 0;
   }
 
+  
   .textblock_container_home {
     max-width: 1250px;
   }
@@ -334,8 +341,11 @@ body {
   } 
 }
 
-
 @media only screen and (min-width: 1000px) {
+  .textblock_container_home, .textblock_container_contact {
+    padding: 32px 24px;
+  }
+
   .contact_container {
     flex-direction: row;
     margin-top: 24px;

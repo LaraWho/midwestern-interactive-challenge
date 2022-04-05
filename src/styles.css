@@ -224,12 +224,13 @@ body {
 }
 
 .form_button {
-  margin: 16px auto;
+  margin: 12px auto;
 }
 
 .form_input_container {
   position: relative;
   margin: 6px;
+  margin-bottom: 16px;
 }
 
 .input--resize, .input--full {
@@ -240,7 +241,7 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size-paragraph);
   background-color: var(--light-gray-inputs);
-  color: var(--mid-gray-text);
+  color: var(--dark-gray-background);
   border: none;
   padding: 12px 16px;
   width: 100%;
@@ -251,8 +252,9 @@ body {
   outline: 2px solid var(--accent-color);
 }
 
-.form_input:invalid {
+.input--error {
   outline: 2px solid var(--red);
+  transition: outline .2s ease-in;
 }
 
 .input--error--text {
@@ -261,6 +263,40 @@ body {
   right: 8px;
   color: var(--red);
   font-size: var(--font-size-paragraph);
+  transition: all .25s ease-in;
+}
+
+.form--success--text {
+  position: relative;
+  opacity: 0;
+  transform: translateY(-200%);
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+@keyframes temp-btn-message {
+  0% {
+    opacity: 0;
+  }
+  10% { 
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(-325%);
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-325%);
+    opacity: 0;
+  }
+}
+
+.show--success {
+  animation: temp-btn-message 6s forwards ease-in-out;
 }
 
 /* Contact Page */

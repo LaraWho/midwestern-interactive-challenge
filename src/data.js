@@ -1,8 +1,3 @@
-export const title = 'JavaScript Puzzle';
-
-export const content = `Remove the duplicates in 2 Javascript objects (found in readme), add the results to an array and output the list of distinct names in an unordered list below this paragraph when this link is clicked. If the operation has been completed already, notify the user that this has already been done.`;
-
-
 const objOne = {
   1.0: 'Matt Johnson',
   1.1: 'Matt Johnson',

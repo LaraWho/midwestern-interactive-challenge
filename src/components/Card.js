@@ -12,7 +12,7 @@ const imgSourceMap = {
 export default function Card( props ) {
   const { imageNum, data } = props;
 
-  return(
+  return (
     <div className='card_container'>
       <img src={imgSourceMap[imageNum]} className='card_img' alt='' />
       <h2 className='card_title title--h2'>{data.title}</h2>

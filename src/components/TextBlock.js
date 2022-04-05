@@ -5,7 +5,7 @@ import Paragraph from './Paragraph';
 export default function TextBlock( props ) {
   const { title, content } = props;
 
-  return(
+  return (
     <div className='textblock_container'>
       <Heading content={title} />
       <Paragraph paragraphText={content} />

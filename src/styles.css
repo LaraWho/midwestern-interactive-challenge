@@ -8,11 +8,11 @@
   --font-family: 'Poppins', sans-serif;
   --font-weight-medium: medium;
   --font-weight-bold: bold;
-  --font-size-paragraph: 14px;
-  --font-size-nav: 18px;
-  --font-size-header-one: 48px;
-  --font-size-header-two: 36px;
-  --font-size-header-three: 18px;
+  --font-size-paragraph: 1rem;
+  --font-size-nav: 1.25rem;
+  --font-size-header-one: 3rem;
+  --font-size-header-two: 2rem;
+  --font-size-header-three: 1.5rem;
 }
 
 body {
@@ -58,6 +58,8 @@ body {
 .button {
   font-size: var(--font-size-paragraph);
   font-family: var(--font-family);
+  cursor: pointer;
+  transition: all .25s ease-in;
 }
 
 .button--primary {
@@ -66,6 +68,22 @@ body {
   border: none;
   background-color: var(--accent-color);
   color: var(--white);
+}
+
+.button-paragraph {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  border-bottom: 1px solid transparent;
+}
+
+.button-paragraph:hover {
+  color: var(--white);
+  border-bottom: 1px solid var(--white);
+}
+
+.text--accent {
+  color: var(--accent-color);
 }
 
 .text--white {
@@ -77,21 +95,49 @@ body {
   border-bottom: 4px solid var(--accent-color);
 }
 
+.list_item {
+  line-height: 1.5rem;
+}
 
-/* TextBlock */
+.list {
+  padding-bottom: 48px;
+}
+
+.list_container {
+  min-height: 200px;
+}
+
+/* JS Puzzle */
+.button.disabled {
+  position: relative;
+}
+
+.button.disabled:hover::after {
+  position: absolute;
+  content: 'already clicked me, mate';
+  background-color: var(--white);
+  color: var(--dark-gray-background);
+  width: 150px;
+  padding: 8px;
+  top: -100%;
+  right: 0;
+}
+
+/* Text Block */
 .textblock_wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 48px;
 }
 
 .textblock_container {
   margin: auto;
+  padding: 32px 24px;
+  max-width: 975px;
 }
 
-.textblock_title, .textblock_text {
-  margin: 32px 24px;
+.heading_title, .paragraph_text {
+  margin: 32px 0px;
 }
 
 /* Navigation */
@@ -157,7 +203,6 @@ body {
 /* Form */
 .form_wrapper {
   background-color: var(--white);
-  padding: 16px;
 }
 
 .form_container {
@@ -194,7 +239,7 @@ body {
 }
 
 .contact-textblock {
-  margin: 54px auto;
+  max-width: 625px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -210,8 +255,12 @@ body {
     flex-grow: 0;
   }
 
-  .textblock_title, .textblock_text {
-    margin: 32px 16px;
+  .textblock_container {
+    max-width: 1250px;
+  }
+
+  .contact-textblock {
+    max-width: 975px;
   }
 
   .input--resize {

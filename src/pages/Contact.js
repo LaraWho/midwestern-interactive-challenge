@@ -10,20 +10,19 @@ export default function Contact() {
   const [ currentPage ] = useState('contact')
 
   useEffect(() => {
-    const getData = async () => {
+    (async () => {
       const apiData = await get(currentPage);
       setContent({
         title: apiData.data[0].title,
         content: apiData.data[0].content,
       })
-    }
-    getData();
+    })()
   }, [currentPage])
   
   const { title, content } = pageContent;
-  
-    return(
-      <div className='contact_wrapper'>
+    
+    return pageContent.content &&
+      (<div className='contact_wrapper'>
 
         <Navigation linkTo='home' />
 
@@ -37,6 +36,5 @@ export default function Contact() {
           </div>
         </div>
 
-      </div>
-    )
+      </div>)
 }

@@ -181,8 +181,11 @@ body {
   flex-grow: 1;
 }
 
-.card_img {
-  margin: auto;
+.card_img_container {
+  min-height: 106px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card_title, .card_text {

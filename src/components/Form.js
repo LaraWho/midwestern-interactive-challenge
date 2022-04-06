@@ -27,6 +27,9 @@ export default function Form() {
 
   const handleChange = (event) => {
     const value = event.target.value;
+    if(showSuccess) {
+      setSuccess(false)
+    }
 
     setFormValues({
       ...formValues,
@@ -70,7 +73,10 @@ export default function Form() {
   const handleReset = () => {
     setFormValues(defaultFormValues);
     setInputError(defaultErrorState);
-    setTimeout(() => setSuccess(false), 6000);
+  }
+  
+  const closeSuccessMsg = () => {
+    setSuccess(false)
   }
   
   return (
@@ -139,7 +145,12 @@ export default function Form() {
       </div>
 
       <button className='form_button button button--primary' onClick={handleSubmit} >Submit</button>
-      <p className={`form--success--text text--paragraph ${showSuccess && 'show--success'}`}>Message sent</p>
+      <p className={`form--success--text text--paragraph ${showSuccess && 'show--success'}`} onClick={closeSuccessMsg}>
+        Message sent
+        <span className='material-icons close-icon'>
+           close
+        </span>
+      </p>
     </form>
   </>
   )

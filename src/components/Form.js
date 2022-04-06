@@ -146,10 +146,7 @@ export default function Form() {
 
       <button className='form_button button button--primary' onClick={handleSubmit} >Submit</button>
       <p className={`form--success--text text--paragraph ${showSuccess && 'show--success'}`} onClick={closeSuccessMsg}>
-        Message sent
-        <span className='material-icons close-icon'>
-           close
-        </span>
+        Message sent &times;
       </p>
     </form>
   </>

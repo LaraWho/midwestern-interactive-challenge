@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navigation from '../components/Navigation';
 import Card from '../components/Card';
-import RemoveDuplicate from '../components/RemoveDuplicate';
+import JSPuzzle from '../components/JSPuzzle';
 import { get } from '../apiController';
 
 
@@ -27,7 +27,7 @@ export default function Home() {
           { displayCards }
         </div>
         <div className='textblock_container_home'>
-          <RemoveDuplicate />
+          <JSPuzzle />
         </div>
       </>)
   }

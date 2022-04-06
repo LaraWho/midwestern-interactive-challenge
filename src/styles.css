@@ -1,5 +1,6 @@
 :root {
   --accent-color: #DEBF79;
+  --accent-color-hover: #DEB045;
   --dark-gray-background: #222222;
   --mid-gray-text: #858585;
   --light-gray-inputs: #F5F5F5;
@@ -65,6 +66,10 @@ body {
   color: var(--white);
 }
 
+.button--primary:hover {
+  background-color: var(--accent-color-hover);
+}
+
 .button-paragraph {
   background-color: transparent;
   border: none;
@@ -75,6 +80,19 @@ body {
 .button-paragraph:hover {
   color: var(--white);
   border-bottom: 1px solid var(--white);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--accent-color);
+  text-transform: lowercase;
+  font-size: var(--font-size-nav);
+  font-weight: var(--font-weight-bold);
+  transition: all .25s ease-in;
+}
+
+.nav-link:hover {
+  color: var(--accent-color-hover);
 }
 
 .text--accent {
@@ -159,14 +177,6 @@ body {
   height: auto;
 }
 
-.nav-link {
-  text-decoration: none;
-  color: var(--accent-color);
-  text-transform: lowercase;
-  font-size: var(--font-size-nav);
-  font-weight: var(--font-weight-bold);
-}
-
 /* Card.js */
 .card_wrapper {
   display: flex;
@@ -198,7 +208,7 @@ body {
 .card_title, .card_text {
   text-align: left;
   width: 100%;
-  max-width: 320px;
+  max-width: 325px;
   margin: 24px auto;
 }
 

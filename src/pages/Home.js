@@ -7,14 +7,13 @@ import { get } from '../apiController';
 
 export default function Home() {
   const [ cardContent, setContent ] = useState([]);
-  const [ currentPage ] = useState('home')
 
   useEffect(() => {
     (async () => {
-      const apiData = await get(currentPage);
+      const apiData = await get('home');
       setContent(apiData.data)
     })()
-  }, [currentPage])  
+  }, [])  
 
   const displayCards = cardContent.map((cardContent, i) => (
       <Card key={i} imageNum={i} data={cardContent} />
@@ -22,7 +21,7 @@ export default function Home() {
 
     return cardContent.length &&
       (<>
-        <Navigation linkTo='contact' />
+        <Navigation linkToPage='contact' pageName='contact' />
         <div className='card_wrapper'>
           { displayCards }
         </div>

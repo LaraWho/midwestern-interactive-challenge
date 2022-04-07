@@ -1,10 +1,11 @@
 import React from 'react';
 
-export default function Heading( { content } ) {
+export default function HeadingOne( props ) {
+  const { content, classNames } = props;
   const [firstWord, rest] = content.split(' ');
 
   return (
-    <h1 className='heading_title title--h1 text--white'>
+    <h1 className={`title-h1 ${classNames}`}>
       <span className='title--underline'>{firstWord}
       </span>
       {rest}

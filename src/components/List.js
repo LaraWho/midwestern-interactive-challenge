@@ -4,7 +4,7 @@ export default function UOList( props ) {
   const { names } = props;
 
   const unorderedList = names.map((name, i) => (
-    <li key={i} className='list_item text-paragraph text--white'>{ name }</li>
+    <li key={i} className='list-item text-paragraph text--white'>{ name }</li>
   ))
 
   return (

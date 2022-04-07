@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Heading from './Heading';
+import HeadingOne from './HeadingOne';
 import List from './List';
 import Paragraph from './Paragraph';
 import { removeDuplicates } from '../jsPuzzle';
@@ -19,7 +19,7 @@ export default function RemoveDuplicate() {
   const showNames = (
     <button 
       onClick={names ? showTooltip : displayNames} 
-      className={`button button-paragraph text--accent ${disabled && 'disabled'}`}
+      className={`button button--underline text--accent ${disabled && 'disabled'}`}
     > 
       this link
     </button> 
@@ -33,8 +33,8 @@ export default function RemoveDuplicate() {
 
   return (
     <>  
-      <Heading content='JavaScript Puzzle' />
-      <Paragraph content={paragraphText}/>
+      <HeadingOne content='JavaScript Puzzle' classNames='text--white' />
+      <Paragraph content={paragraphText} classNames='text--white' />
       <div className='list_container'>
         { names && <List names={names} /> }
       </div>

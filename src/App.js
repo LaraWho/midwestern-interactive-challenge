@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
-import './reset.css';
-import './styles.css';
+import './css/reset.css';
+import './css/styles.css';
 
 export default function App() {
   return (
@@ -10,7 +10,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
 
-          <Route element={<Home />} path='/home' />
+          <Route element={<Home />} path='/' exact />
           <Route element={<Contact />} path='/contact' />
 
         </Routes>

@@ -136,7 +136,7 @@ export default function Form() {
         <textarea 
           className={`form_input ${hasInputError.message && !message && 'input--error'}`} 
           type='text' 
-          rows='8'
+          rows='5'
           placeholder='Message' 
           name='message'
           value={message} 

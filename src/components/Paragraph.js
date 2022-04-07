@@ -1,7 +1,9 @@
 import React from 'react';
 
-export default function Paragraph( { content } ) {
+export default function Paragraph( props ) {
+  const { content, classNames } = props;
+
   return (
-    <p className='paragraph_text text--paragraph text--white'>{content}</p>
+    <p className={`text-paragraph ${classNames}`}>{content}</p>
   )
 }

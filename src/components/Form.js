@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { post } from '../apiController';
+import HeadingTwo from './HeadingTwo';
 
 export default function Form() {
 
@@ -81,7 +82,7 @@ export default function Form() {
   
   return (
     <>
-    <h2 className='form_title title--h2'>Contact</h2>
+    <HeadingTwo content='Contact' classNames='form-title' />
     <form className='form_container'>
       <div className='form_input_container input--resize'>
         <input 
@@ -144,8 +145,9 @@ export default function Form() {
         {hasInputError.message && !message && <span className='input--error--text'>required</span>}       
       </div>
 
-      <button className='form_button button button--primary' onClick={handleSubmit} >Submit</button>
-      <p className={`form--success--text text--paragraph ${showSuccess && 'show--success'}`} onClick={closeSuccessMsg}>
+      <button className='form_button button button--primary' onClick={handleSubmit}>Submit</button>
+
+      <p className={`text-paragraph form--success--text ${showSuccess && 'show--success'}`} onClick={closeSuccessMsg}>
         Message sent &times;
       </p>
     </form>

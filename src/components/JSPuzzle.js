@@ -27,7 +27,7 @@ export default function RemoveDuplicate() {
 
   const paragraphText = (
     <>
-      Remove the duplicates in 2 Javascript objects (found in readme), add the results to an array and output the list of distinct names in an unordered list below this paragraph when { showNames } is clicked. If the operation has been completed already, notify the user that this has already been done.
+      Remove the duplicates in 2 Javascript objects (found in readme), add the results to an array and output the list of distinct names in an unordered list below this paragraph when {showNames} is clicked. If the operation has been completed already, notify the user that this has already been done.
     </>
   )
 
@@ -36,7 +36,7 @@ export default function RemoveDuplicate() {
       <HeadingOne content='JavaScript Puzzle' classNames='text--white' />
       <Paragraph content={paragraphText} classNames='text--white' />
       <div className='list_container'>
-        { names && <List names={names} /> }
+        {names && <List names={names} />}
       </div>
     </>
 

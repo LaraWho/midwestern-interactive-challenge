@@ -7,10 +7,14 @@ export default function Navigation( props ) {
 
   return (
     <div className='nav_container'>
-      <img src={logo} className='nav_item nav-logo' alt='Midwestern Interactive' />
+      <img 
+        src={logo} 
+        className='nav_item nav-logo' 
+        alt='Midwestern Interactive Logo' 
+      />
       <Link to={`${linkToPage}`} className='nav_item nav-link' >
         <h2 className='nav_link'>
-          { pageName }
+          {pageName}
         </h2>
       </Link>
     </div>

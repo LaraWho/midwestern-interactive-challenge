@@ -346,6 +346,10 @@ body {
   .textblock_container_home {
     max-width: 1250px;
   }
+
+  .contact_container {
+    height: calc(100% - 150px);
+  }
   
   /* Form element modifier */
   .input--resize {
@@ -373,6 +377,7 @@ body {
   .textblock_container_contact {
     width: 100%;
     padding: 16px;
+    margin-top: -12%;
   }
 
   .form_wrapper {

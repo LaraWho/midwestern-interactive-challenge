@@ -23,7 +23,7 @@ export default function Home() {
       (<>
         <Navigation linkToPage='contact' pageName='contact' />
         <div className='card_wrapper'>
-          { displayCards }
+          {displayCards}
         </div>
         <div className='textblock_container_home'>
           <JSPuzzle />

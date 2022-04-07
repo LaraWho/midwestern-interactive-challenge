@@ -21,7 +21,9 @@ export default function Card( props ) {
       </div>
       <HeadingTwo content={data.title} classNames='card-title' />
       <Paragraph content={data.content} classNames='card-text' />
-      <button className='card-button button button--primary'>Learn More</button>
+      <button className='card-button button button--primary'>
+        Learn More
+      </button>
     </div>
   )
 }

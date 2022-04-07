@@ -145,9 +145,16 @@ export default function Form() {
         {hasInputError.message && !message && <span className='input--error--text'>required</span>}       
       </div>
 
-      <button className='form_button button button--primary' onClick={handleSubmit}>Submit</button>
+      <button 
+        className='form_button button button--primary' onClick={handleSubmit}
+      >
+        Submit
+      </button>
 
-      <p className={`text-paragraph form--success--text ${showSuccess && 'show--success'}`} onClick={closeSuccessMsg}>
+      <p 
+        className={`text-paragraph form--success--text ${showSuccess && 'show--success'}`} 
+        onClick={closeSuccessMsg}
+      >
         Message sent &times;
       </p>
     </form>

@@ -6,7 +6,8 @@ export default function HeadingOne( props ) {
 
   return (
     <h1 className={`title-h1 ${classNames}`}>
-      <span className='title--underline'>{firstWord}
+      <span className='title--underline'>
+        {firstWord}
       </span>
       {rest}
     </h1>

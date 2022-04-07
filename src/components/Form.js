@@ -146,7 +146,7 @@ export default function Form() {
       </div>
 
       <button 
-        className='form_button button button--primary' onClick={handleSubmit}
+        className='form-button button button--primary' onClick={handleSubmit}
       >
         Submit
       </button>
